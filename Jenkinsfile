@@ -9,7 +9,7 @@ pipeline {
         stage('AWS_CONFIG') {
             steps {
                 withAWS(credentials: 'AWS_DEV', region: 'us-east-1') {
-                sh 'aws sts get-caller-identity --query Account --output text'
+                sh '/usr/local/bin/aws sts get-caller-identity --query Account --output text'
                 }
             }
         }
