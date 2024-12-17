@@ -25,7 +25,6 @@ pipeline {
                 // sudo mv terraform 
                 /usr/local/bin/terraform --version
                 '''
-                }
             }
         }
     }
