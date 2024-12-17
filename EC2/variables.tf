@@ -23,11 +23,11 @@ variable "instances" {
       instance_type = "t2.medium"
       key_name      = "management_key"
     }
-    instance3 = {
-      ami           = "ami-066784287e358dad1"
-      instance_type = "t2.medium"
-      key_name      = "management_key"
-    }
+    # instance3 = {
+    #   ami           = "ami-066784287e358dad1"
+    #   instance_type = "t2.medium"
+    #   key_name      = "management_key"
+    # }
   }
 
 }
