@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        // TF_VERSION = '1.6.0' // Specify the Terraform version
+        TF_VERSION = '1.6.0' // Specify the Terraform version
     }
     stages {
         stage('SCM') {
