@@ -18,13 +18,14 @@ pipeline {
         }
         stage('TERRAFORM_CONFIG') {
             steps {
-                sh '''
-                // # Download Terraform
-                // wget https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip
-                // unzip terraform_${TF_VERSION}_linux_amd64.zip
-                // sudo mv terraform 
-                /usr/local/bin/terraform --version
-                '''
+                // sh '''
+                // // # Download Terraform
+                // // wget https://releases.hashicorp.com/terraform/${TF_VERSION}/terraform_${TF_VERSION}_linux_amd64.zip
+                // // unzip terraform_${TF_VERSION}_linux_amd64.zip
+                // // sudo mv terraform 
+                // /usr/local/bin/terraform --version
+                // '''
+                sh '/usr/local/bin/terraform --version'
             }
         }
     }
