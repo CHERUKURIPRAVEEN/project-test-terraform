@@ -15,7 +15,7 @@ variable "instances" {
   default = {
     instance1 = {
       ami           = "ami-04a81a99f5ec58529"
-      instance_type = "t2.medium"
+      instance_type = "t2.micro"
       key_name      = "management_key"
     }
     # instance2 = {
