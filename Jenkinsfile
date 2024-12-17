@@ -30,7 +30,10 @@ pipeline {
         }
         stage('TERRAFORM_INIT') {
             steps {
-                sh '/usr/local/bin/terraform init'
+                sh '''
+                cd EC2/
+                /usr/local/bin/terraform init
+                '''
             }
         }
     }
