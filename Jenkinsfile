@@ -60,11 +60,11 @@ pipeline {
                 '''
             }
         }
-        stage('TERRAFORM_APPLY) {
+        stage('TERRAFORM_APPLY') {
             steps {
                 sh '''
                 cd EC2/
-                /usr/local/bin/terraform apply -auto-approve
+                /usr/local/bin/terraform plan -auto-approve
                 '''
             }
         }
