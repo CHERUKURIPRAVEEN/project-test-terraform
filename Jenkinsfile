@@ -64,7 +64,7 @@ pipeline {
             steps {
                 sh '''
                 cd EC2/
-                /usr/local/bin/terraform plan -auto-approve
+                /usr/local/bin/terraform apply -auto-approve
                 '''
             }
         }
