@@ -68,5 +68,13 @@ pipeline {
                 '''
             }
         }
+        stage('TERRAFORM_DESTROY') {
+            steps {
+                sh '''
+                cd EC2/
+                /usr/local/bin/terraform destroy -auto-approve
+                '''
+            }
+        }
     }
 }
