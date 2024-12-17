@@ -36,5 +36,29 @@ pipeline {
                 '''
             }
         }
+        stage('TERRAFORM_FMT') {
+            steps {
+                sh '''
+                cd EC2/
+                /usr/local/bin/terraform fmt
+                '''
+            }
+        }
+        stage('TERRAFORM_VALIDATE') {
+            steps {
+                sh '''
+                cd EC2/
+                /usr/local/bin/terraform validate
+                '''
+            }
+        }
+        stage('TERRAFORM_PLAN') {
+            steps {
+                sh '''
+                cd EC2/
+                /usr/local/bin/terraform plan
+                '''
+            }
+        }
     }
 }
