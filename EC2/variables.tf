@@ -20,7 +20,7 @@ variable "instances" {
     }
     instance2 = {
       ami           = "ami-066784287e358dad1"
-      instance_type = "t2.nano"
+      instance_type = "t2.micro"
       key_name      = "management_key"
     }
     instance3 = {
