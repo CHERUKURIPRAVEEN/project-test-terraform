@@ -28,5 +28,10 @@ pipeline {
                 sh '/usr/local/bin/terraform --version'
             }
         }
+        stage('TERRAFORM_INIT') {
+            steps {
+                sh '/usr/local/bin/terraform init'
+            }
+        }
     }
 }
