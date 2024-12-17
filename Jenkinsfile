@@ -60,5 +60,13 @@ pipeline {
                 '''
             }
         }
+        stage('TERRAFORM_APPLY) {
+            steps {
+                sh '''
+                cd EC2/
+                /usr/local/bin/terraform apply -auto-approve
+                '''
+            }
+        }
     }
 }
