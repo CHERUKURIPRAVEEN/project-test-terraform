@@ -36,5 +36,45 @@ pipeline {
                 '''
             }
         }
+        stage('TERRAFORM_FMT') {
+            steps {
+                sh '''
+                cd EC2/
+                /usr/local/bin/terraform fmt
+                '''
+            }
+        }
+        stage('TERRAFORM_VALIDATE') {
+            steps {
+                sh '''
+                cd EC2/
+                /usr/local/bin/terraform validate
+                '''
+            }
+        }
+        stage('TERRAFORM_PLAN') {
+            steps {
+                sh '''
+                cd EC2/
+                /usr/local/bin/terraform plan
+                '''
+            }
+        }
+        stage('TERRAFORM_APPLY') {
+            steps {
+                sh '''
+                cd EC2/
+                /usr/local/bin/terraform apply -auto-approve
+                '''
+            }
+        }
+        stage('TERRAFORM_DESTROY') {
+            steps {
+                sh '''
+                cd EC2/
+                /usr/local/bin/terraform destroy -auto-approve
+                '''
+            }
+        }
     }
 }

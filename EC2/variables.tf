@@ -15,19 +15,19 @@ variable "instances" {
   default = {
     instance1 = {
       ami           = "ami-04a81a99f5ec58529"
-      instance_type = "t2.micro"
+      instance_type = "t2.medium"
       key_name      = "management_key"
     }
-    instance2 = {
-      ami           = "ami-066784287e358dad1"
-      instance_type = "t2.nano"
-      key_name      = "management_key"
-    }
-    instance3 = {
-      ami           = "ami-066784287e358dad1"
-      instance_type = "t2.micro"
-      key_name      = "management_key"
-    }
+    # instance2 = {
+    #   ami           = "ami-066784287e358dad1"
+    #   instance_type = "t2.medium"
+    #   key_name      = "management_key"
+    # }
+    # instance3 = {
+    #   ami           = "ami-066784287e358dad1"
+    #   instance_type = "t2.medium"
+    #   key_name      = "management_key"
+    # }
   }
 
 }
